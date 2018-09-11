@@ -61,6 +61,14 @@ Page({
     }
     this.setData(obj1);
   },
+  bindToMore(e){
+    console.log(e);
+    let name = e.currentTarget.dataset.name;
+    wx.navigateTo({
+      url: '../detail/detail?type',
+    })
+
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
