@@ -64,8 +64,9 @@ Page({
   bindToMore(e){
     console.log(e);
     let name = e.currentTarget.dataset.name;
+    console.log(name);
     wx.navigateTo({
-      url: '../detail/detail?type',
+      url: '../detail/detail?type='+name,
     })
 
   },
