@@ -18,7 +18,21 @@
 - justify-content:space-between;  左边靠左对齐， 右边靠右对齐 ，左边一个，右边一个
 - 
 ### 抽离公共方法 utils
-- 请求方法 - 
+- 请求方法 - 用的一个变量type
 ```
 ```
 ### 渲染数据
+- es6 结构赋值
+- wx:if的用法， 在模块星里
+- 
+
+
+### 提交git
+```
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/ohtml/wxdouban.git
+git push -u origin master
+
+```
