@@ -1,0 +1,8 @@
+/* pages/index/index.wxss */
+@import "./search/search.wxss";
+@import "./movie-item/movie-item.wxss";
+@import "./movie-list/movie-list.wxss";
+
+page{
+    background: #e1e1e1e1;
+}

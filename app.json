@@ -1,0 +1,13 @@
+{
+    "pages": [
+        "pages/index/index"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#42bd56",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "豆豆评分",
+        "backgroundColor": "#ffffff",
+        "backgroundTextStyle": "dark",
+        "enablePullDownRefresh": false
+    }
+}

@@ -1,0 +1,32 @@
+.movie-list-item {
+  display: flex;
+  flex-direction: column;
+}
+.movie-list-title {
+  display: flex;
+  flex: row;
+  flex-direction: row;
+  background: #ffffff;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  justify-content: space-between;
+  width: 670rpx;
+}
+.movie-list-title .more {
+  color: #42bd56;
+}
+.movie-list-container {
+  display: flex;
+  flex-direction: row;
+}
+.movie-list-warp {
+  background: #ffffff;
+  margin-bottom: 10rpx;
+  width: 100%;
+}
+.movie-list-warp .movie-list-w {
+  width: 680rpx;
+  margin: 0 auto;
+  padding-bottom: 10rpx;
+}
