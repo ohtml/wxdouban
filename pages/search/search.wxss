@@ -1,0 +1,61 @@
+.search-page{
+    background: #00b600;
+    height: 60rpx;
+    padding-bottom: 10rpx;
+}
+.search-page .search-page-in{
+    width: 95%;
+    height: 60rpx;
+    border-radius: 10rpx;
+    background: #ffffff;
+    margin:0 auto;
+}
+.search-page .search-page-in input{
+    font-size: 24rpx;
+}
+
+.search-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:96%;
+    margin:0 auto;
+    font-size: 24rpx;
+    line-height: 38rpx;
+    padding-top:20rpx;    
+}
+    
+.search-page-img{
+    width:120rpx!important;
+    height:120rpx!important;
+}
+.search-page-container{
+    display: flex;
+    flex-direction: row;
+    padding:25rpx 25rpx;
+    border-bottom: 1px solid #cccccc;
+}
+.search-page-content,.search-page-movies{
+    display: flex;
+    flex-direction: column;
+}
+.search-page-movies{
+    padding-left:20rpx;
+}
+.search-page-title{
+    font-size: 24rpx;
+    height: 80rpx;
+
+}
+.search-page-year{
+    font-size: 24rpx;
+    color:#cccccc;
+
+}
+.search-page-historys{
+    font-size: 24rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding-left:20rpx;
+
+}

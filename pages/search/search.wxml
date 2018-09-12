@@ -1,0 +1,34 @@
+<view class="search-page">
+  <view class="search-page-in">
+    <input type="text" value="{{val}}" bindinput="valToSearch" bindblur="saveStorage" placeholder="请输入内容" />
+  </view>
+  <!--  未搜素到的内容 -->
+  <view>
+    <view wx:if="{{flag}}">
+      <view class="search-title" >
+        <text>历史记录</text>
+        <text bindtap="clearHistory">清楚</text>
+      </view>
+      <view class="">
+        <block wx:for="{{historys}}" wx:key="{{index}}">
+          <view class="search-page-historys" bindtap="searchByhistory" data-history="{{item}}">
+             <text >{{item}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+    <!-- 已搜素到的内容 -->
+    <view wx:else class="search-page-movies">
+        <block wx:for="{{movies}}" wx:key="{{index}}">
+            <view class="search-page-container">
+             <image class="search-page-img" src='{{item.image3}}'></image>
+             <view class="search-page-movies">
+               <text class="search-page-title">{{item.title}}</text>
+               <text class="search-page-year">{{item.year}}</text>
+             </view>
+           </view>
+         </block>
+    </view>
+
+  </view>
+</view>

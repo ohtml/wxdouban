@@ -50,7 +50,8 @@ Page({
         rating: {
           stars: starToArray(cur.rating.stars),//星
           average: cur.rating.average //评分
-        }
+        },
+        id:cur.id
       }
       arr.push(tmpl);
     }
@@ -60,6 +61,7 @@ Page({
       name,
     }
     this.setData(obj1);
+    console.log(obj1)
   },
   bindToMore(e){
     console.log(e);
@@ -70,7 +72,17 @@ Page({
     })
 
   },
-
+  bindToSearch(){
+    wx.navigateTo({
+      url: '../search/search',
+    })
+  },
+  bindToDetail(e){
+    let mid = e.currentTarget.dataset.mid;
+    wx.navigateTo({
+      url: './movie-detail/movie-detail?mid='+mid,
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

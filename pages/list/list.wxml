@@ -1,0 +1,11 @@
+<scroll-view scroll-y="{{true}}" style="height:1300rpx" bindscrolltolower="scrollBottom">
+<view class="list-container">
+    <block wx:for="{{list}}">
+        <view class="list-content">
+            <image class="list-item-img" src="https://img12.360buyimg.com/cms/s276x276_{{item.imagePath}}"></image>
+            <text class="list-item-title">{{item.title}}</text>
+        </view>
+    </block>
+
+</view>
+</scroll-view>

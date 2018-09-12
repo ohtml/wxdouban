@@ -10,7 +10,8 @@ function fetchData(url) {
             method: 'GET',
             dataType: "json",
             header: {
-                'content-type': 'json' // 默认值
+                // 'content-type': 'json' // 默认值
+                'content-type': 'application/x-www-form-urlencoded',
             }, // 设置请求的 header
             success: resolve,
             fail: reject,

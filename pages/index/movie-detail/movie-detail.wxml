@@ -1,0 +1,10 @@
+<import src="../star/star.wxml" />
+
+<view class="movie-container">
+    <view class="movie-left">
+        <text class="movie-title">{{movie.title}}</text>
+        <template is="star"></template>
+        <text class="movie-summary">{{movie.summary}}</text>
+    </view>
+    <image bindtap="imgbig" class="info-img" src="{{movie.image}}"></image>
+</view>

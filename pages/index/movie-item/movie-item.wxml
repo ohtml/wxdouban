@@ -1,10 +1,9 @@
-<import src="../star/star.wxml"/>
+<import src="../star/star.wxml" />
 
 <template name="movie-item">
-    <view class="movie-item">
-         <image class="movie-img" src="{{images}}"></image>
-         <text class="movie-item-title">{{title}} </text>
-         <template is="star" data="{{...rating}}"></template> 
+    <view class="movie-item" bindtap="bindToDetail" data-mid="65655">
+        <image class="movie-img" src="{{images}}"></image>
+        <text class="movie-item-title">{{title}} </text>
+        <template is="star" data="{{...rating}}"></template>
     </view>
 </template>
-

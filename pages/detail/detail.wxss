@@ -1,1 +1,11 @@
-/* pages/detail/detail.wxss */
+@import "../index/search/search.wxss";
+@import "../index/movie-item/movie-item.wxss";
+@import "../index/movie-list/movie-list.wxss";
+
+.detail-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:auto 12rpx ;
+    margin-top: 20rpx;
+}
