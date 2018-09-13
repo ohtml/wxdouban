@@ -15,21 +15,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let url = "" ;
     fetchData(url).then(res=>{
       //console.log(res.data.newChannelProducts.fineDiscount.activitySkus);
        this.processData(res.data.newChannelProducts.fineDiscount.activitySkus)
     })
   },
   scrollBottom(){
-    if(this.data.num>3){
-      return ;
-
-    }
-    let num = this.data.num +1;
-    this.setData({
-      num:num
-    })
-    wx.showLoading();
+    let url ="";
     fetchData(url).then(res=>{
       //console.log(res.data.newChannelProducts.fineDiscount.activitySkus);
       this.processData(res.data.newChannelProducts.fineDiscount.activitySkus)

@@ -1,12 +1,6 @@
 ## 接口
 ```
- https://api.douban.com/v2/movie/in_theaters 电营
- https://api.douban.com/v2/movie/coming_soon   即将上营
- https://api.douban.com/v2/movie/top250  前250
- search
- https://api.douban.com/v2/movie/search?q="" //搜素
- //详情
- https://api.douban.com/v2/movie/subject/1764796
+ 
 
 ```
 
