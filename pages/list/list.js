@@ -14,7 +14,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let url = "https://beta-api.m.jd.com/?functionId=ncFineDiscountIndex&body={'pageNum':'1','pageSize':'10','categoryId':0}&client=wh5&clientVersion=1.0.0";
+    
     fetchData(url).then(res=>{
       //console.log(res.data.newChannelProducts.fineDiscount.activitySkus);
       this.setData({
@@ -25,7 +25,7 @@ Page({
   scrollBottom(){
     console.log(this.data.list)
     console.log("333")
-    let url = "https://beta-api.m.jd.com/?functionId=ncFineDiscountIndex&body={'pageNum':'1','pageSize':'10','categoryId':0}&client=wh5&clientVersion=1.0.0";
+    
     fetchData(url).then(res=>{
       //console.log(res.data.newChannelProducts.fineDiscount.activitySkus);
       let arr = res.data.newChannelProducts.fineDiscount.activitySkus;
