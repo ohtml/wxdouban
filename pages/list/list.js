@@ -6,7 +6,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    list:[]
+    list:[],
+    num:1,
 
   },
 
@@ -14,27 +15,34 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    let url = "https://beta-api.m.jd.com/?functionId=ncFineDiscountIndex&body={'pageNum':'1','pageSize':'10','categoryId':0}&client=wh5&clientVersion=1.0.0";
     fetchData(url).then(res=>{
       //console.log(res.data.newChannelProducts.fineDiscount.activitySkus);
-      this.setData({
-        list:res.data.newChannelProducts.fineDiscount.activitySkus
-      })
+       this.processData(res.data.newChannelProducts.fineDiscount.activitySkus)
     })
   },
   scrollBottom(){
-    console.log(this.data.list)
-    console.log("333")
-    let url = "https://beta-api.m.jd.com/?functionId=ncFineDiscountIndex&body={'pageNum':'1','pageSize':'10','categoryId':0}&client=wh5&clientVersion=1.0.0";
+    if(this.data.num>3){
+      return ;
+
+    }
+    let num = this.data.num +1;
+    this.setData({
+      num:num
+    })
+    wx.showLoading();
     fetchData(url).then(res=>{
       //console.log(res.data.newChannelProducts.fineDiscount.activitySkus);
-      let arr = res.data.newChannelProducts.fineDiscount.activitySkus;
-      if(this.data.list!=""){
-           this.data.list.concat(arr)
-      }
-      this.setData({
-        list:arr
-      })
+      this.processData(res.data.newChannelProducts.fineDiscount.activitySkus)
+    })
+    wx.hideLoading();
+  },
+  processData(data){
+    var arr = data;
+    if(this.data.list.length>0){
+      arr = this.data.list.concat(data)
+    }
+    this.setData({
+      list:arr
     })
   },
   /**
